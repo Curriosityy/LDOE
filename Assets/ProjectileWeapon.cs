@@ -3,6 +3,8 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class ProjectileWeapon : Weapon
 {
     [SerializeField] float _weaponRange=250;
@@ -29,7 +31,7 @@ public class ProjectileWeapon : Weapon
             return;
         }
         _rounds--;
-        if(Physics.Raycast(new Ray(transform.position, transform.forward), out var hit, _weaponRange))
+        if(Physics.Raycast(new Ray(transform.position, transform.forward), out var hit, _weaponRange+Random.Range(-10,10)))
         {
             var damageable = hit.collider.GetComponent<IDamageable>();
             damageable?.Hit(_damage);
