@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     //Minion
     [SerializeField] CharacterController _controller;
     [SerializeField] Minion _minion;
-    Weapon _holdedWeapon;
     void Update()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -19,12 +18,18 @@ public class Player : MonoBehaviour
             _minion.LookAt(point);
         }
         _minion.Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _minion.SetWeapon(null);
+        }
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            _minion.Fire();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            _minion.Reload();
+        }
     }
 
-}
-
-public abstract class Weapon
-{
-    public abstract void Attack();
-    public abstract void Reload();
 }
