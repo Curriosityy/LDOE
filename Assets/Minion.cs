@@ -29,7 +29,7 @@ public class Minion : MonoBehaviour
 
     public void Move(float x,float z)
     {
-        characterController.SimpleMove(((transform.forward*z)+(transform.right*x)).normalized*speed);
+        characterController.SimpleMove(((transform.forward*z)+(transform.right*x))*speed);
         animator.SetFloat("X", x);
         animator.SetFloat("Z", z);
     }
