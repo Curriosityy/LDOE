@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 public class ProjectileWeapon : Weapon
@@ -13,10 +14,10 @@ public class ProjectileWeapon : Weapon
     [SerializeField] int _maxRounds = 30;
     bool _canFire=true;
     int _rounds = 0;
-    
-    public void Initialize()
+    Transform minion;
+    public override void Initialize()
     {
-
+        minion = transform.root.GetChild(0);
     }
 
     public override void Attack()
@@ -31,8 +32,11 @@ public class ProjectileWeapon : Weapon
             return;
         }
         _rounds--;
-        
-        if(Physics.Raycast(new Ray(transform.position, transform.forward), out var hit, (_weaponRange + Random.Range(-5, 5))))
+        var ray = new Ray(transform.position, minion.forward);
+        var range = (_weaponRange + Random.Range(-5, 5));
+        Debug.DrawRay(ray.origin,ray.direction,Color.red,5f);
+        Debug.DrawLine(ray.origin, ray.origin + ray.direction * range, Color.red, 5f);
+        if (Physics.Raycast(ray, out var hit, range))
         {
             var damageable = hit.collider.GetComponent<IDamageable>();
             damageable?.Hit(_damage);
