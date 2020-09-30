@@ -19,13 +19,15 @@ public class Minion : MonoBehaviour
 
     public void SetWeapon(Weapon weapon)
     {
-        weapon = _weapon;
-        weapon.transform.SetParent(_pointingFinger);
-        weapon.transform.position = _pointingFinger.position;
-        weapon.Initialize();
+        if (weapon == null)
+            return;
+        _weapon = weapon;
+        _weapon.transform.SetParent(_pointingFinger);
+        _weapon.transform.position = _pointingFinger.position;
+        _weapon.Initialize();
         //var direction = _pointingFinger.right+_pointingFinger.up;
         var direction = _pointingFinger.forward;
-        weapon.transform.rotation = Quaternion.LookRotation(direction);
+        _weapon.transform.rotation = Quaternion.LookRotation(direction);
     }
 
     public void Move(float x,float z)
@@ -42,7 +44,8 @@ public class Minion : MonoBehaviour
 
     internal void Reload()
     {
-        _weapon.Reload();
+        if(_weapon!=null)
+            _weapon.Reload();
     }
 
     public void LookAt(Vector3 position)
@@ -53,6 +56,7 @@ public class Minion : MonoBehaviour
 
     public void Fire()
     {
-        _weapon.Attack();
+        if (_weapon != null)
+            _weapon?.Attack();
     }
 }
