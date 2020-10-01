@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Backpack : MonoBehaviour
 {
+    public event Action<Item> AddedItem;
+    public event Action<Item> ItemCannotBeAdded;
+
     [SerializeField] int _x;
     [SerializeField] int _y;
     Item[,] _inventory;
