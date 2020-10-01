@@ -88,4 +88,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprite: {fileID: 4898263112355571797}
-  _space: 0
+  _space: 4
+  _minion: {fileID: 0}

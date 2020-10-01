@@ -21,12 +21,21 @@ public class InventoryGrid : MonoBehaviour
     private void Awake()
     {
         _layout = GetComponent<GridLayoutGroup>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Minion>();
+        _backpack = _player.GetComponent<Backpack>();
     }
 
     private void OnEnable()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Minion>();
-        _backpack = _player.GetComponent<Backpack>();
+        _backpack.AddedItem += OnAddItem;
+    }
+    private void OnDisable()
+    {
+        _backpack.AddedItem -= OnAddItem;
+    }
+    private void OnAddItem(Item arg1, Vector2Int arg2)
+    {
+        throw new System.NotImplementedException();
     }
 
     void Start()
@@ -41,8 +50,6 @@ public class InventoryGrid : MonoBehaviour
             for(int j=0;j < _backpack.Y; j++)
             {
                 _uiGrid[i,j]=Instantiate(_gridPrefab, transform);
-                _uiGrid[i, j].Initialize(_player);
-
             }
         }
     }

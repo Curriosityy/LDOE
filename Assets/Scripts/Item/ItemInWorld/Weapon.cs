@@ -1,16 +1,5 @@
 ﻿using UnityEngine;
 
-public abstract class ItemMonoBehaviour : MonoBehaviour
-{
-    public abstract Item Item { get; }
-    public abstract void Initialize();
-
-    public void PickUp()
-    {
-
-    }
-}
-
 public abstract class Weapon: ItemMonoBehaviour
 {
 

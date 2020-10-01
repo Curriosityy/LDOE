@@ -7,14 +7,5 @@ public class Grid : MonoBehaviour
 {
     [SerializeField] Image _sprite;
     [SerializeField] ItemSpace _space;
-    
-    [SerializeField] 
-    Minion _minion;
 
-
-    public void Initialize(Minion minion,ItemSpace itemSpace=ItemSpace.All)
-    {
-        _minion = minion;
-        _space = itemSpace;
-    }
 }

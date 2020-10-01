@@ -8,6 +8,7 @@ public class InventoryItemUI:MonoBehaviour,IDragHandler,IDropHandler,IPointerDow
     [SerializeField] Image _image;
     Item _data;
     Minion _player;
+
     public void Initialize(Item item,Minion player)
     {
         _data = item;
