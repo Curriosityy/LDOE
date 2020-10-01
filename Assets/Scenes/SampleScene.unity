@@ -209,7 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3bdf1ae8431d7448a2fc52e96f1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInBackpack: 0
+  _sprite: {fileID: 0}
+  _space: 2
 --- !u!1 &52360755
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3bdf1ae8431d7448a2fc52e96f1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInBackpack: 0
+  _sprite: {fileID: 0}
+  _space: 3
 --- !u!1 &436666493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3bdf1ae8431d7448a2fc52e96f1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInBackpack: 0
+  _sprite: {fileID: 0}
+  _space: 0
 --- !u!1 &871933168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3bdf1ae8431d7448a2fc52e96f1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInBackpack: 0
+  _sprite: {fileID: 0}
+  _space: 1
 --- !u!1 &892450795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3bdf1ae8431d7448a2fc52e96f1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInBackpack: 0
+  _sprite: {fileID: 0}
+  _space: 0
 --- !u!1 &947357024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,8 +1928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fb2177a9989c84c9a0744806c2d287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gridPrefab: {fileID: 6398276571237776957, guid: 705ca22dbbb785f428dc0938762ec021,
+  _gridPrefab: {fileID: 4359495282506472091, guid: 705ca22dbbb785f428dc0938762ec021,
     type: 3}
+  _gridSize: {x: 40, y: 40}
 --- !u!114 &1300423770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1962,7 +1968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
-  m_VerticalFit: 1
+  m_VerticalFit: 2
 --- !u!1 &1359261295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,7 +2904,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3bdf1ae8431d7448a2fc52e96f1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInBackpack: 0
+  _sprite: {fileID: 0}
+  _space: 3
 --- !u!1001 &4733820572331638642
 PrefabInstance:
   m_ObjectHideFlags: 0

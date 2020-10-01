@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2759091ba95d0374896b404af79519de, type: 3}
+  m_Name: AK47
+  m_EditorClassIdentifier: 
+  _itemName: AK47
+  _itemSize: {x: 2, y: 3}
+  _icon: {fileID: 21300000, guid: 72b0022ee3f33784ba320bf448a9cfcd, type: 3}
+  _itemPrefab: {fileID: 4589096437609888947, guid: 1713fe251ab05a644b8d3990547e027b,
+    type: 3}
+  _information: Fast shooting weapon
+  _damageRange: {x: 33, y: 66}

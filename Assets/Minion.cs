@@ -12,10 +12,6 @@ public class Minion : MonoBehaviour
     [SerializeField] Transform _holdHand;
     [SerializeField] Weapon _weapon;
     float speed=5;
-    void Start()
-    {
-        
-    }
 
     public void SetWeapon(Weapon weapon)
     {

@@ -8,11 +8,17 @@ public class Player : MonoBehaviour
     //Minion
     [SerializeField] CharacterController _controller;
     [SerializeField] Minion _minion;
+
+    Camera _camera;
+    private void Awake()
+    {
+        _camera = Camera.main;
+    }
     void Update()
     {
         if(!EventSystem.current.IsPointerOverGameObject())
         {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            var ray = _camera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hit, Mathf.Infinity, 1 << 8))
             {
                 var point = hit.point;
