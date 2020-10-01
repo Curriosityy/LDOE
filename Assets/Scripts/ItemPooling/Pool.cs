@@ -41,6 +41,6 @@ public class Pool<T> : MonoBehaviour where T:MonoBehaviour
 
     private void CreateNewObiectInPool()
     {
-        _pool.Enqueue(Instantiate(_prefab));
+        AddObjecToPool(Instantiate(_prefab));
     }
 }
