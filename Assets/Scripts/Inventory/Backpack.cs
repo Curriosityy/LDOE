@@ -55,6 +55,11 @@ public class Backpack : MonoBehaviour
 
     private bool CanBeAdded(Item itemData, int i, int j)
     {
+        if(i + itemData.ItemSize.y > _x || j + itemData.ItemSize.x > _y)
+        {
+            return false;
+        }
+
         for (int k = 0; k < itemData.ItemSize.x; k++)
         {
             for (int n = 0; n < itemData.ItemSize.y; n++)

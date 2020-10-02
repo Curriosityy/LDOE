@@ -19,10 +19,6 @@ public abstract class Item:ScriptableObject
     {
         return Instantiate(_itemPrefab);
     }
-    public virtual InventoryItemUI InstantiateToInInventory()
-    {
-        return null;
-    }
     public override string ToString()
     {
         return _information;

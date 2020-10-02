@@ -14,7 +14,6 @@ public class InventoryGrid : MonoBehaviour
     UIItemPool _pool;
     Grid[,] _uiGrid;
 
-    public Transform ItemParent { get => _itemParent; }
     public Grid[,] UiGrid { get => _uiGrid; }
 
     private void Awake()
@@ -59,7 +58,6 @@ public class InventoryGrid : MonoBehaviour
     {
         if (_backpack == null)
             return;
-
         InitializeUIBackpack();
     }
 
