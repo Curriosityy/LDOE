@@ -8,4 +8,5 @@ public class Grid : MonoBehaviour
     [SerializeField] Image _sprite;
     [SerializeField] ItemSpace _space;
 
+    public Image Sprite { get => _sprite; }
 }

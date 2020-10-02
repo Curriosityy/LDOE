@@ -1022,8 +1022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4299e12f716bd479f9b24c4abd4c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 0}
   _minion: {fileID: 1215845780}
+  _cheatItem: {fileID: 11400000, guid: 65c859ea233ab3e4dae1c008bb63e4f4, type: 2}
 --- !u!4 &621145389
 Transform:
   m_ObjectHideFlags: 0
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   _gridPrefab: {fileID: 4359495282506472091, guid: 705ca22dbbb785f428dc0938762ec021,
     type: 3}
   _gridSize: {x: 40, y: 40}
-  _itemParent: {fileID: 1300423768}
+  _itemParent: {fileID: 1619442572}
 --- !u!114 &1300423770
 MonoBehaviour:
   m_ObjectHideFlags: 0

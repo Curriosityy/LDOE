@@ -55,9 +55,9 @@ public class Backpack : MonoBehaviour
 
     private bool CanBeAdded(Item itemData, int i, int j)
     {
-        for (int k = 0; k < itemData.ItemSize.y; k++)
+        for (int k = 0; k < itemData.ItemSize.x; k++)
         {
-            for (int n = 0; n < itemData.ItemSize.x; n++)
+            for (int n = 0; n < itemData.ItemSize.y; n++)
             {
                 if (_inventory[i + n, j + k] != null)
                 {
@@ -68,11 +68,12 @@ public class Backpack : MonoBehaviour
         return true;
     }
 
+
     private void AddToArray(Item itemData, int i, int j)
     {
-        for (int k = 0; k < itemData.ItemSize.y; k++)
+        for (int k = 0; k < itemData.ItemSize.x; k++)
         {
-            for (int n = 0; n < itemData.ItemSize.x; n++)
+            for (int n = 0; n < itemData.ItemSize.y; n++)
             {
                 _inventory[i + n, j + k] = itemData;
             }

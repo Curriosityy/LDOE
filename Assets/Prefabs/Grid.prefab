@@ -36,8 +36,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &8727923655709191258
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -89,4 +89,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprite: {fileID: 4898263112355571797}
   _space: 4
-  _minion: {fileID: 0}

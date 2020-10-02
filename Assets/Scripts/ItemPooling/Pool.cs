@@ -16,7 +16,7 @@ public class Pool<T> : MonoBehaviour where T:MonoBehaviour
     {
         _pool.Enqueue(objectToAdd);
         objectToAdd.transform.SetParent(_transform);
-        gameObject.SetActive(false);
+        objectToAdd.gameObject.SetActive(false);
     }
 
     public T GetNotActiveObjectFromPool()

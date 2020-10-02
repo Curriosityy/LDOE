@@ -27,20 +27,32 @@ public class InventoryGrid : MonoBehaviour
 
     private void OnEnable()
     {
-        _backpack.AddedItem += OnAddItem;
+        _backpack.AddedItem += SpawnItem;
     }
     private void OnDisable()
     {
-        _backpack.AddedItem -= OnAddItem;
-    }
-    private void OnAddItem(Item arg1, Vector2Int arg2)
-    {
-        throw new System.NotImplementedException();
+        _backpack.AddedItem -= SpawnItem;
     }
 
     private void SpawnItem(Item item,Vector2Int position)
     {
+        Debug.Log(position);
+        var obj = _pool.GetActiveOvjectFromPool();
+        obj.Initialize(item, _player);
+        obj.transform.SetParent(_itemParent);
+        obj.transform.localPosition = _uiGrid[position.x, position.y].transform.localPosition;
+        COLORINVENTORYDEBUG(item, position.x, position.y);
+    }
 
+    private void COLORINVENTORYDEBUG(Item itemData, int i, int j)
+    {
+        for (int k = 0; k < itemData.ItemSize.x; k++)
+        {
+            for (int n = 0; n < itemData.ItemSize.y; n++)
+            {
+                _uiGrid[i + n, j + k].Sprite.color=Color.red;
+            }
+        }
     }
 
     void Start()

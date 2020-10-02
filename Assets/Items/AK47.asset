@@ -15,7 +15,9 @@ MonoBehaviour:
   _itemName: AK47
   _itemSize: {x: 2, y: 3}
   _icon: {fileID: 21300000, guid: 72b0022ee3f33784ba320bf448a9cfcd, type: 3}
-  _itemPrefab: {fileID: 4589096437609888947, guid: 1713fe251ab05a644b8d3990547e027b,
-    type: 3}
+  _itemPrefab: {fileID: 0}
   _information: Fast shooting weapon
   _damageRange: {x: 33, y: 66}
+  _weaponRange: 250
+  _fireRate: 0.3
+  _maxRounds: 30

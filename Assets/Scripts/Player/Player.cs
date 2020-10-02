@@ -6,9 +6,8 @@ using UnityEngine.EventSystems;
 public class Player : MonoBehaviour
 {
     //Minion
-    [SerializeField] CharacterController _controller;
     [SerializeField] Minion _minion;
-
+    [SerializeField] Item _cheatItem;
     Camera _camera;
     private void Awake()
     {
@@ -39,6 +38,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             _minion.Reload();
+        }
+        if(Input.GetKeyDown(KeyCode.F1))
+        {
+            _minion.GetComponent<Backpack>().AddItem(_cheatItem);
         }
     }
 
